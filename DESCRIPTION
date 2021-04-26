@@ -1,0 +1,14 @@
+Package: shotnoise
+Type: Package
+Title: Exact simulation of non-negative shot noise processes and non-Gaussian OU processes, in particular OU-Poisson, OU-Gamma and OU-Inverse Gaussian processes
+Version: 0.1.0
+Author: M. Tamborrino
+Maintainer: M. Tamborrino <massimiliano.tamborrino@warwick.ac.uk>
+Description: Exact simulation of the shot noise, OU-Poisson, OU-IG and OU-Gamma processes.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.5.0), Rcpp,RcppEigen,statmod
+Imports: devtools,foreach,doSNOW,doParallel
+LinkingTo: Rcpp,RcppEigen
+RoxygenNote: 7.1.1
