@@ -47,3 +47,7 @@ Use code_Figure1.r to generate two trajectories of the OU-Gamma and OU-IG proces
 Use code_Figure2.r to compare the estimated probability density functions of the shot noise process, the Gaussian OU and the non-Gaussian OU, reproducing Fig. 2 of [1]. 
 
 All parameters are chosen according to Table 1 of [1].
+
+# How to know more about each specific routine
+Digit ?nameroutine to find out what the routine 'nameroutine' is doing, its input parameters and its output. For example, ?OU_Gamma_trajectory describe what the function 'OU_Gamma_trajectory' is doing, describing each needed input entry and the returned output.
+
