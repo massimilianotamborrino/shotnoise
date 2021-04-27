@@ -28,7 +28,7 @@ where N(t) is a Poisson process with rate lambda>0 and J is the distribution of 
 
 dY(t)= -delta Y(t) dt + rho dZ(t),      (a)
 
-with \delta=\alpha and Z(t) being a Poisson process with intensity mu>0, see Section 3 of [1]. R code: OU_Poisson
+with delta=alpha and Z(t) being a Poisson process with intensity mu>0, see Section 3 of [1]. R code: OU_Poisson
 
 4) the exact simulation of N values from an OU-Gamma process at time t, solution of (a) above (i.e. (13) of [1]) with delta=alpha and Z(t) being a gamma process with Lévy measure \nu(dx)=tilde.alpha x^{-1}e^{-\beta x}dx. See Section 3.2 and Table 1 for the chosen parameters, and [2] for the description of the simulation algorithm. R code: OU_Gamma
 
