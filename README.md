@@ -21,18 +21,21 @@ Here we provide the code for
 dX(t)= -alpha X(t) dt + J dN(t),
 
 where N(t) is a Poisson process with rate lambda>0 and J is the distribution of the jump amplitude. In the package, we consider J to be a Bernoulli distribution (shotnoise_JnBer), Poisson (shotnoise_JnP), chi-square (shotnoise_JnP with parameter scenario equal to 1), Gamma (shotnoise_JnG, with scenario equal to 2), inverse-Gaussian ( shotnoise_JnIG). The chosen parameters and the generating algorithm is described in [1].
+
 2) the exact simulation of a trajectory of the shot noise process with Gamma and IG jump amplitudes (shotnoise_JnG_trajectory and shotnoise_JnIG_trajectory, respectively).
-3) the exact simulation of $N$ values from an OU-Poisson process at time $t$, solution of (13) of [1]
-\begin{equation}\label{13} 
-dY(t)= -\delta Y(t) dt + \rho dZ(t)\end{equation},
-with $\delta=\alpha$ and $Z(t)$ being a Poisson process with intensity $\mu>0$, see Section 3 of [1]. R code: OU_Poisson
-4) the exact simulation of $N$ values from an OU-Gamma process at time $t$, solution of (13) of [1] 
-$$ dY(t)= -\delta Y(t) dt + \rho dZ(t)$$,
-with $\delta=\alpha$ and $Z(t)$ being a gamma process with Lévy measure $\nu(dx)=\tilde \alpha x^{-1}e^{-\beta x}dx$. See Section 3.2 and Table 1 for the chosen parameters, and [2] for the description of the simulation algorithm. R code: OU_Gamma
-5) the exact simulation of $N$ values from an OU-IG process at time $t$, solution of (13) of [1] 
-$$ dY(t)= -\delta Y(t) dt + \rho dZ(t)$$,
-with $\delta=\alpha$ and $Z(t)$ being an Inverse Gaussian process with Lévy measure $\nu(dx)=e^{-c^2 x/2}dx$, with $c^2=\mu/\tilde\sigma^2$. See Section 3.2 and Table 1 for the chosen parameters, and [3] for the description of the simulation algorithm.  R code: OU_IG
+
+3) the exact simulation of N values from an OU-Poisson process at time t, solution of (13) of [1]
+
+dY(t)= -delta Y(t) dt + rho dZ(t),      (a)
+
+with \delta=\alpha and Z(t) being a Poisson process with intensity mu>0, see Section 3 of [1]. R code: OU_Poisson
+
+4) the exact simulation of N values from an OU-Gamma process at time t, solution of (a) above (i.e. (13) of [1]) with delta=alpha and Z(t) being a gamma process with Lévy measure \nu(dx)=tilde.alpha x^{-1}e^{-\beta x}dx. See Section 3.2 and Table 1 for the chosen parameters, and [2] for the description of the simulation algorithm. R code: OU_Gamma
+
+5) the exact simulation of N values from an OU-IG process at time t, solution of (a) above with delta=alpha and Z(t) being an Inverse Gaussian process with Lévy measure nu(dx)=e^{-c^2 x/2}dx, with c^2=mu/tilde.sigma^2. See Section 3.2 and Table 1 for the chosen parameters, and [3] for the description of the simulation algorithm.  R code: OU_IG
+
 6) the simulation of a trajectory of the OU-Gamma process (OU_Gamma_trajectory) and the OU-IG process (OU_IG_trajectory)
+
 7) the computation of integrated absolute errors (IAEs) between the shot noise process and the corresponding Gaussian OU or non-Gaussian OU process.
 
 # How to install the package
