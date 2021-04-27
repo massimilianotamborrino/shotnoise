@@ -17,8 +17,10 @@ Those Matlab algorithms have been then rewritten in Rcpp and included in the pac
 # What can you find in the package
 Here we provide the code for
 1) the exact simulation of N values from a non-negative shot noise process $X$ at time $t$, solution of the stochastic differential equation (2) from [1]
-\( dX(t)= -\alpha X(t) dt + J dN(t)\),
-where $N(t)$ is a Poisson process with rate $\lambda>0$ and $J$ is the distribution of the jump amplitude. In the package, we consider $J$ to be a Bernoulli distribution (shotnoise_JnBer), Poisson (shotnoise_JnP), chi-square (shotnoise_JnP with parameter scenario equal to 1), Gamma (shotnoise_JnG, with scenario equal to 2), inverse-Gaussian ( shotnoise_JnIG). The chosen parameters and the generating algorithm is described in [1].
+
+dX(t)= -alpha X(t) dt + J dN(t),
+
+where N(t) is a Poisson process with rate lambda>0 and J is the distribution of the jump amplitude. In the package, we consider J to be a Bernoulli distribution (shotnoise_JnBer), Poisson (shotnoise_JnP), chi-square (shotnoise_JnP with parameter scenario equal to 1), Gamma (shotnoise_JnG, with scenario equal to 2), inverse-Gaussian ( shotnoise_JnIG). The chosen parameters and the generating algorithm is described in [1].
 2) the exact simulation of a trajectory of the shot noise process with Gamma and IG jump amplitudes (shotnoise_JnG_trajectory and shotnoise_JnIG_trajectory, respectively).
 3) the exact simulation of $N$ values from an OU-Poisson process at time $t$, solution of (13) of [1]
 \begin{equation}\label{13} 
